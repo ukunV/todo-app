@@ -12,14 +12,21 @@ import {
 } from 'react-icons/md';
 import '../styles/TodoListItem.css';
 
-const TodoListItem = () => {
+const TodoListItem = ({ todo, onRemove, onToggle }) => {
+	const { id, text, checked } = todo;
+
 	return (
 		<div className="TodoListItem">
-			<div className="checkbox">
-				<MdCheckBoxOutlineBlank />
-				<div className="text">할 일</div>
+			<div
+				className="checkbox"
+				checked={checked}
+				id={checked ? 'line' : 'unline'}
+				onClick={() => onToggle(id)}
+			>
+				{checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+				<div className="text">{text}</div>
 			</div>
-			<div className="remove">
+			<div className="remove" onClick={() => onRemove(id)}>
 				<MdRemoveCircleOutline />
 			</div>
 		</div>

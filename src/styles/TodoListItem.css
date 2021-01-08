@@ -25,11 +25,11 @@
 	flex: 1;
 }
 
-.TodoListItem .checkbox svg:checked {
+.TodoListItem #line svg {
 	color: #22b8cf;
 }
 
-.TodoListItem .checkbox .text:checked {
+.TodoListItem #line .text {
 	color: #adb5bd;
 	text-decoration: line-through;
 }
