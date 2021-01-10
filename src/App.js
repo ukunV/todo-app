@@ -4,6 +4,7 @@ import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
 const App = () => {
+	// const [<상태 값 저장 변수>, <상태 값 갱신 함수>] = useState(<상태 초기 값>);
 	const [todos, setTodos] = useState([
 		{
 			id: 1,
@@ -59,6 +60,7 @@ const App = () => {
 
 	return (
 		<TodoTemplate>
+			{/* 이 안의 내용이 children */}
 			<TodoInsert onInsert={onInsert} />
 			<TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
 		</TodoTemplate>
