@@ -27,7 +27,7 @@ const App = () => {
 		(text) => {
 			const todo = {
 				id: nextId.current,
-				text,
+				text: text,
 				checked: false,
 			};
 			// (todos) =>: 함수형 업데이트
